@@ -145,10 +145,10 @@ header {
 
 .header__logo {
   width: 100%;
-  max-width: 90px;
+  max-width: 128px;
   height: 20px;
   margin-left: 12px;
-  background-image: url('./img/logo.png');
+  background-image: url('./assets/gr-logo.svg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
