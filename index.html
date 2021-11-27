@@ -1,328 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <meta name="description" content="Goldel Ratio Calculator which keen to help
-     designers and developers use golden ratio rule properly">
-   <meta name="keywords" content="golden ratio, calculator, fibonachchi,
-     golden ratio calculator, design, ui design, designers, developerns, visual example">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VVJQ8E9MVG"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <title>Golden Ratio Calculator</title>
+  gtag('config', 'G-VVJQ8E9MVG');
+  </script>
 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="assets/gr-fav.ico">
-  </head>
-  <body>
-    <header>
-      <a href="../index.html" class="header__logo"></a>
-      <div class="nav">
-        <!-- <a class="nav__item" href="../html/time-on-rate.html">Time on Rate</a>
-        <a class="nav__item active" href="../html/golden-ratio.html">Golgen Ratio</a> -->
-      </div>
-      <a href="https://www.buymeacoffee.com/yurytsyganchuk" class="button_default-black">Buy me a coffee</a>
-    </header>
+  <meta name="description" content="Goldel Ratio Calculator which keen to help
+  designers and developers use golden ratio rule properly">
+  <meta name="keywords" content="golden ratio, calculator, fibonachchi,
+  golden ratio calculator, design, ui design, designers, developerns, visual example">
 
-    <div class="container">
+  <title>Golden Ratio Calculator</title>
 
-      <div class="form_wrapper">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="assets/gr-fav.ico">
+</head>
+
+<body>
+  <header>
+    <a href="../index.html" class="header__logo"></a>
+    <div class="nav">
+      <!-- <a class="nav__item" href="../html/time-on-rate.html">Time on Rate</a>
+      <a class="nav__item active" href="../html/golden-ratio.html">Golgen Ratio</a> -->
+    </div>
+    <a href="https://www.buymeacoffee.com/yurytsyganchuk" class="button_default-black">Buy me a coffee</a>
+  </header>
+
+  <div class="container">
+    <div class="content_wrapper">
+
+    <h1 class="headlie_title">Welcome to the Golden Ratio Calculator</h1>
+    <h3 class="headlie_subtitle">This tool, thet use golden proportion, to help calculate and visually present a ratio of the content</h3>
+
+    <div class="form_wrapper">
       <form class="data_input" id="goldenRatio">
         <!-- Longer Section  -->
         <div class="input_group">
           <h4 class="field_label">Longer section (A)</h4>
           <input
-            class="text_field gr_input"
-            type="number"
-            name="longSide"
-            placeholder="Enter size"
+          class="text_field gr_input"
+          type="number"
+          name="longSide"
+          placeholder="Enter size"
           />
         </div>
         <!-- Shorter Section:  -->
         <div class="input_group">
           <h4 class="field_label">Shorter section (B)</h4>
           <input
-            class="text_field gr_input"
-            type="number"
-            name="shortSide"
-            placeholder="Enter size"
+          class="text_field gr_input"
+          type="number"
+          name="shortSide"
+          placeholder="Enter size"
           >
         </div>
         <!-- Full Size:  -->
         <div class="input_group">
           <h4 class="field_label">Whole (A+B)</h4>
           <input
-            class="text_field gr_input"
-            type="number"
-            name="fullSize"
-            placeholder="Enter size"
+          class="text_field gr_input"
+          type="number"
+          name="fullSize"
+          placeholder="Enter size"
           >
         </div>
 
-        <input class="button_default-black result_button" type="button" value="Show example" onclick="visualizeRatio()">
-        <input class="button_plain reset_button" id="reset_button" type="reset" value="Reset" onclick="visualizeRatio()">
+        <div class="button_default-black result_button" type="button" value="Show example" onclick="visualizeRatio()">Show example</div>
+        <div class="button_plain reset_button" id="reset_button" type="reset" value="Reset" onclick="visualizeRatio()">Reset</div>
       </form>
 
 
     </div>
 
-      <div class="content">
+    <div class="content">
+
         <!--Line view container  -->
         <div class="view_container">
-        <div class="title_box">
-          <h4 class="field_label">Line view</h4>
-          <div class="measure_pill-plain"> <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/>
-            <path d="M12.866 3l9.526 16.5a1 1 0 0 1-.866 1.5H2.474a1 1 0 0 1-.866-1.5L11.134 3a1 1 0 0 1 1.732 0zM11 16v2h2v-2h-2zm0-7v5h2V9h-2z"
-            fill="rgba(107,107,107,1)"/></svg></div>
-             <span>Resized</span></div>
-        </div>
+          <div class="title_box">
+            <h4 class="field_label">Line view</h4>
+            <div class="measure_pill-plain"> <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/>
+              <path d="M12.866 3l9.526 16.5a1 1 0 0 1-.866 1.5H2.474a1 1 0 0 1-.866-1.5L11.134 3a1 1 0 0 1 1.732 0zM11 16v2h2v-2h-2zm0-7v5h2V9h-2z"
+              fill="rgba(107,107,107,1)"/></svg></div>
+              <span>Resized</span></div>
+            </div>
 
-        <div class="line_view_box">
-          <div id="lineViewLongSide">
-            <div class="measure_box">
-              <div class="measure_pill-box">
-                <div class="measure_pill-dark">
-                  <span class="longSideResultNum">A</span>
+            <div class="line_view_box">
+              <div id="lineViewLongSide">
+                <div class="measure_box">
+                  <div class="measure_pill-box">
+                    <div class="measure_pill-dark">
+                      <span class="longSideResultNum">A</span>
+                    </div>
+                  </div>
+                  <div class="measure_line-dark"></div>
                 </div>
               </div>
-              <div class="measure_line-dark"></div>
-            </div>
-          </div>
 
-          <div id="lineViewShortSide">
+              <div id="lineViewShortSide">
+                <div class="measure_box">
+                  <div class="measure_pill-box">
+                    <div class="measure_pill-light">
+                      <span class="shortSideResultNum">B</span>
+                    </div>
+                  </div>
+                  <div class="measure_line-light"></div>
+                </div>
+              </div>
+
+            </div>
             <div class="measure_box">
               <div class="measure_pill-box">
                 <div class="measure_pill-light">
-                  <span class="shortSideResultNum">B</span>
+                  <span class="fullSizeResultNum">A+B</span>
                 </div>
               </div>
               <div class="measure_line-light"></div>
             </div>
           </div>
 
-        </div>
-        <div class="measure_box">
-          <div class="measure_pill-box">
-            <div class="measure_pill-light">
-              <span class="fullSizeResultNum">A+B</span>
+          <!--Square view container  -->
+          <div class="view_container">
+
+            <div class="title_box">
+              <h4 class="field_label">Square view</h4>
+              <div class="measure_pill-plain"> <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/>
+                <path d="M12.866 3l9.526 16.5a1 1 0 0 1-.866 1.5H2.474a1 1 0 0 1-.866-1.5L11.134 3a1 1 0 0 1 1.732 0zM11 16v2h2v-2h-2zm0-7v5h2V9h-2z"
+                fill="rgba(107,107,107,1)"/></svg></div>
+                <span>Resized</span></div>
+              </div>
+
+              <div class="rectangle_wrapper">
+
+                <div class="measure_box">
+                  <div class="measure_pill-box">
+                    <div class="measure_pill-dark">
+                      <span class="longSideResultNum">A</span>
+                    </div>
+                  </div>
+                  <div class="measure_line-dark"></div>
+                </div>
+
+                <div class="measure_box ver-measure_box">
+                  <div class="measure_pill-box">
+                    <div class="measure_pill-light">
+                      <span class="shortSideResultNum">B</span>
+                    </div>
+                  </div>
+                  <div class="measure_line-light"></div>
+                </div>
+
+                <div class="rectangle_view_box">
+                  <div id="rectangleViewResult" class="rectangle">
+
+                  </div>
+
+                </div>
+
+              </div>
+
             </div>
-          </div>
-          <div class="measure_line-light"></div>
-        </div>
-      </div>
 
-        <!--Square view container  -->
-        <div class="view_container">
+            <div class="typography_view">
+              <div class="title_box">
+                <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
+                <h4 class="field_label">Typography view</h4>
+              </div>
+              <div class="typography_view_contatiner" id="typography_container">
+                <div class="headline_view-box">
+                  <div class="measure_pill-dark"> <span class="longSideResultNum">A </span> </div>
+                  <div class="headline_body">You are better designer than you was tomorrow</div>
+                </div>
+                <div class="copy_view-box">
+                  <div class="measure_pill-light">
+                    <span class="shortSideResultNum">B</span>
+                  </div>
+                  <div class="copy_body">Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon something else.
+                    However, when it comes to existence itself, it takes on the opposite. It’s mind boggling to think that something has always been and always will be.
+                    It goes contrary to what we experience in our lives. </div>
+                  </div>
+                </div>
 
-        <div class="title_box">
-          <h4 class="field_label">Square view</h4>
-          <div class="measure_pill-plain"> <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/>
-            <path d="M12.866 3l9.526 16.5a1 1 0 0 1-.866 1.5H2.474a1 1 0 0 1-.866-1.5L11.134 3a1 1 0 0 1 1.732 0zM11 16v2h2v-2h-2zm0-7v5h2V9h-2z"
-            fill="rgba(107,107,107,1)"/></svg></div>
-             <span>Resized</span></div>
-        </div>
-
-        <div class="rectangle_wrapper">
-
-          <div class="measure_box">
-            <div class="measure_pill-box">
-              <div class="measure_pill-dark">
-                <span class="longSideResultNum">A</span>
               </div>
             </div>
-            <div class="measure_line-dark"></div>
-          </div>
-
-          <div class="measure_box ver-measure_box">
-            <div class="measure_pill-box">
-              <div class="measure_pill-light">
-                <span class="shortSideResultNum">B</span>
-              </div>
-            </div>
-            <div class="measure_line-light"></div>
-          </div>
-
-          <div class="rectangle_view_box">
-            <div id="rectangleViewResult" class="rectangle">
-
-            </div>
-
           </div>
 
         </div>
-
-      </div>
-
-        <div class="typography_view">
-        <div class="title_box">
-          <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
-          <h4 class="field_label">Typography view</h4>
-        </div>
-        <div class="typography_view_contatiner" id="typography_container">
-          <div class="headline_view-box">
-            <div class="measure_pill-dark"> <span class="longSideResultNum">A </span> </div>
-            <div class="headline_body">You are better designer than you was tomorrow</div>
-          </div>
-          <div class="copy_view-box">
-            <div class="measure_pill-light">
-              <span class="shortSideResultNum">B</span>
-            </div>
-            <div class="copy_body">Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon something else.
-              However, when it comes to existence itself, it takes on the opposite. It’s mind boggling to think that something has always been and always will be.
-              It goes contrary to what we experience in our lives. </div>
-          </div>
-        </div>
-
-      </div>
-      </div>
-
-    </div>
+        <footer>
+          <a href="https://tsyganchuk.webflow.io/" target="_blank" class="link">Made by Tsyganchuk</a>
+          <a href="https://www.invisionapp.com/inside-design/golden-ratio-designers/" target="_blank" class="link">Read InVision Golden Ratio guide</a>
+          <a href="https://yurytsyganchuk.typeform.com/to/twzE20LX" target="_blank" class="link">Provide a feedback</a>
+        </footer>
 
 
-  <script type="text/javascript">
-    const form = document.getElementById('goldenRatio');
-    const { longSide, shortSide, fullSize } = form.elements;
+        <script type="text/javascript">
+        const form = document.getElementById('goldenRatio');
+        const { longSide, shortSide, fullSize } = form.elements;
 
-    const calculateFromLongSide = ({ target }) => {
-      if (target.value === '') {
-        shortSide.value = '';
-        fullSize.value = '';
+        const calculateFromLongSide = ({ target }) => {
+          if (target.value === '') {
+            shortSide.value = '';
+            fullSize.value = '';
 
-        return;
-      }
+            return;
+          }
 
-      const longSideValue = target.value ? +target.value : 0;
-      const shortSideValue = longSideValue / 1.618;
+          const longSideValue = target.value ? +target.value : 0;
+          const shortSideValue = longSideValue / 1.618;
 
-      shortSide.value = Math.round(shortSideValue);
-      fullSize.value = Math.round(shortSideValue + longSideValue);
-    }
+          shortSide.value = Math.round(shortSideValue);
+          fullSize.value = Math.round(shortSideValue + longSideValue);
+        }
 
-    const calculateFromShortSide = ({ target }) => {
-      if (target.value === '') {
-        longSide.value = '';
-        fullSize.value = '';
+        const calculateFromShortSide = ({ target }) => {
+          if (target.value === '') {
+            longSide.value = '';
+            fullSize.value = '';
 
-        return;
-      }
+            return;
+          }
 
-      const shortSideValue = target.value ? +target.value : 0;
-      const longSideValue = shortSideValue * 1.618;
+          const shortSideValue = target.value ? +target.value : 0;
+          const longSideValue = shortSideValue * 1.618;
 
-      longSide.value = Math.round(longSideValue);
-      fullSize.value = Math.round(shortSideValue + longSideValue);
-    }
+          longSide.value = Math.round(longSideValue);
+          fullSize.value = Math.round(shortSideValue + longSideValue);
+        }
 
-    const calculateFromSum = ({ target }) => {
-      if (target.value === '') {
-        shortSide.value = '';
-        longSide.value = '';
+        const calculateFromSum = ({ target }) => {
+          if (target.value === '') {
+            shortSide.value = '';
+            longSide.value = '';
 
-        return;
-      }
+            return;
+          }
 
-      const fullSizeValue = target.value ? +target.value : 0;
-      const longSideValue = fullSizeValue / 1.618;
-      const shortSideValue = fullSizeValue - longSideValue;
+          const fullSizeValue = target.value ? +target.value : 0;
+          const longSideValue = fullSizeValue / 1.618;
+          const shortSideValue = fullSizeValue - longSideValue;
 
-      shortSide.value = Math.round(shortSideValue);
-      longSide.value = Math.round(longSideValue);
-    }
+          shortSide.value = Math.round(shortSideValue);
+          longSide.value = Math.round(longSideValue);
+        }
 
-    const visualizeRatio = () => {
-      // TODO: verify if it's really needed
-      if (longSide.value === '' || shortSide.value === '' || fullSize.value === '') {
-        return;
-      }
+        const visualizeRatio = () => {
+          // TODO: verify if it's really needed
+          if (longSide.value === '' || shortSide.value === '' || fullSize.value === '') {
+            return;
+          }
 
-      const longSideResult = Math.round(longSide.value);
-      const shortSideResult = Math.round(shortSide.value);
-      const fullSizeResult = Math.round(fullSize.value);
-
-
-      const rectangleView = document.getElementById("rectangleViewResult");
-      rectangleView.style.width = longSideResult + "px";
-      rectangleView.style.height = shortSideResult + "px";
-
-      const lineViewLongSide = document.getElementById("lineViewLongSide");
-      lineViewLongSide.style.width = longSideResult + "px";
-
-      const lineViewShortSide = document.getElementById("lineViewShortSide");
-      lineViewShortSide.style.width = shortSideResult + "px";
-
-      // long side
-      const longSideElementsList = document.getElementsByClassName("longSideResultNum");
-
-      for (let i = 0; i < longSideElementsList.length; i++) {
-        longSideElementsList[i].innerHTML = longSideResult;
-      }
-
-      // short side
-      const shortSideElementsList = document.getElementsByClassName("shortSideResultNum");
-
-      for (let i = 0; i < shortSideElementsList.length; i++) {
-        shortSideElementsList[i].innerHTML = shortSideResult;
-      }
-
-      // full size
-      const fullSizeElementsList = document.getElementsByClassName("fullSizeResultNum");
-
-      for (let i = 0; i < fullSizeElementsList.length; i++) {
-        fullSizeElementsList[i].innerHTML = fullSizeResult;
-      }
-    }
-
-    const resetRatioElements = () => {
-      const rectangleView = document.getElementById("rectangleViewResult");
-      rectangleView.style.removeProperty('width');
-      rectangleView.style.removeProperty('height');
-
-      const lineViewLongSide = document.getElementById("lineViewLongSide");
-      lineViewLongSide.style.removeProperty('width');
-
-      const lineViewShortSide = document.getElementById("lineViewShortSide");
-      lineViewShortSide.style.removeProperty('width');
-
-      // long side
-      const longSideElementsList = document.getElementsByClassName("longSideResultNum");
-
-      for (let i = 0; i < longSideElementsList.length; i++) {
-        longSideElementsList[i].innerHTML = 'A';
-      }
-
-      // short side
-      const shortSideElementsList = document.getElementsByClassName("shortSideResultNum");
-
-      for (let i = 0; i < shortSideElementsList.length; i++) {
-        shortSideElementsList[i].innerHTML = 'B';
-      }
-
-      // full size
-      const fullSizeElementsList = document.getElementsByClassName("fullSizeResultNum");
-
-      for (let i = 0; i < fullSizeElementsList.length; i++) {
-        fullSizeElementsList[i].innerHTML = 'A+B';
-      }
-    }
-
-    // event listeners
-    longSide.addEventListener('input', calculateFromLongSide);
-    shortSide.addEventListener('input', calculateFromShortSide);
-    fullSize.addEventListener('input', calculateFromSum);
-
-    form.addEventListener('reset', resetRatioElements);
+          const longSideResult = Math.round(longSide.value);
+          const shortSideResult = Math.round(shortSide.value);
+          const fullSizeResult = Math.round(fullSize.value);
 
 
-    // switcher
-    document.getElementById('switch').onchange = function() {
-      document.getElementById('typography_container').style.display = this.checked ? 'block' : 'none';
-    };
+          const rectangleView = document.getElementById("rectangleViewResult");
+          rectangleView.style.width = longSideResult + "px";
+          rectangleView.style.height = shortSideResult + "px";
 
-  </script>
+          const lineViewLongSide = document.getElementById("lineViewLongSide");
+          lineViewLongSide.style.width = longSideResult + "px";
 
-  </body>
+          const lineViewShortSide = document.getElementById("lineViewShortSide");
+          lineViewShortSide.style.width = shortSideResult + "px";
 
-</html>
+          // long side
+          const longSideElementsList = document.getElementsByClassName("longSideResultNum");
+
+          for (let i = 0; i < longSideElementsList.length; i++) {
+            longSideElementsList[i].innerHTML = longSideResult;
+          }
+
+          // short side
+          const shortSideElementsList = document.getElementsByClassName("shortSideResultNum");
+
+          for (let i = 0; i < shortSideElementsList.length; i++) {
+            shortSideElementsList[i].innerHTML = shortSideResult;
+          }
+
+          // full size
+          const fullSizeElementsList = document.getElementsByClassName("fullSizeResultNum");
+
+          for (let i = 0; i < fullSizeElementsList.length; i++) {
+            fullSizeElementsList[i].innerHTML = fullSizeResult;
+          }
+        }
+
+        const resetRatioElements = () => {
+          const rectangleView = document.getElementById("rectangleViewResult");
+          rectangleView.style.removeProperty('width');
+          rectangleView.style.removeProperty('height');
+
+          const lineViewLongSide = document.getElementById("lineViewLongSide");
+          lineViewLongSide.style.removeProperty('width');
+
+          const lineViewShortSide = document.getElementById("lineViewShortSide");
+          lineViewShortSide.style.removeProperty('width');
+
+          // long side
+          const longSideElementsList = document.getElementsByClassName("longSideResultNum");
+
+          for (let i = 0; i < longSideElementsList.length; i++) {
+            longSideElementsList[i].innerHTML = 'A';
+          }
+
+          // short side
+          const shortSideElementsList = document.getElementsByClassName("shortSideResultNum");
+
+          for (let i = 0; i < shortSideElementsList.length; i++) {
+            shortSideElementsList[i].innerHTML = 'B';
+          }
+
+          // full size
+          const fullSizeElementsList = document.getElementsByClassName("fullSizeResultNum");
+
+          for (let i = 0; i < fullSizeElementsList.length; i++) {
+            fullSizeElementsList[i].innerHTML = 'A+B';
+          }
+        }
+
+        // event listeners
+        longSide.addEventListener('input', calculateFromLongSide);
+        shortSide.addEventListener('input', calculateFromShortSide);
+        fullSize.addEventListener('input', calculateFromSum);
+
+        form.addEventListener('reset', resetRatioElements);
+
+
+        // switcher
+        document.getElementById('switch').onchange = function() {
+          document.getElementById('typography_container').style.display = this.checked ? 'block' : 'none';
+        };
+
+        </script>
+
+      </body>
+
+      </html>
